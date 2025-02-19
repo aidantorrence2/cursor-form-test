@@ -99,10 +99,10 @@ export default function Home() {
                 </h1>
                 <div className="prose max-w-none">
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    I'm offering a free beach photo shoot opportunity while I'm in town for a short time. Here are the details.
+                    I&apos;m offering a free beach photo shoot opportunity while I&apos;m in town for a short time. Here are the details.
                   </p>
                   <ul className="list-disc pl-6 mt-4 text-gray-600 text-sm md:text-base">
-                    <li>The shoot is totally free. There are no hidden fees or costs. I am making content for my portfolio and social media and I'm looking for models to shoot with.</li>
+                    <li>The shoot is totally free. There are no hidden fees or costs. I am making content for my portfolio and social media and I&apos;m looking for models to shoot with.</li>
                     <li>1 to 2 hours professional photography session</li>
                     <li>Professional guidance and posing tips</li>
                     <li>You will receive the photos in 2 weeks</li>
@@ -118,7 +118,7 @@ export default function Home() {
                   Bring a Friend
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
-                  It's very important for me to ensure participants feel comfortable during the shoot. You are welcome to bring any guests that you would like. Or if you want to bring a friend to shoot with, that's also fine. Let me know if that is something you are interested in!
+                  It&apos;s very important for me to ensure participants feel comfortable during the shoot. You are welcome to bring any guests that you would like. Or if you want to bring a friend to shoot with, that&apos;s also fine. Let me know if that is something you are interested in!
                 </p>
                 <div className="space-y-3">
                   <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
@@ -130,7 +130,7 @@ export default function Home() {
                       checked={formData.bringFriend === 'yes'}
                       className="h-4 w-4 text-blue-500"
                     />
-                    <span className="text-gray-700 text-sm md:text-base">Yes, I'd love to bring a friend!</span>
+                    <span className="text-gray-700 text-sm md:text-base">Yes, I&apos;d love to bring a friend!</span>
                   </label>
                   <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input
@@ -141,7 +141,7 @@ export default function Home() {
                       checked={formData.bringFriend === 'no'}
                       className="h-4 w-4 text-blue-500"
                     />
-                    <span className="text-gray-700 text-sm md:text-base">No, it's fine</span>
+                    <span className="text-gray-700 text-sm md:text-base">No, it&apos;s fine</span>
                   </label>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function Home() {
                       checked={formData.artisticInterest === 'very-interested'}
                       className="h-4 w-4 text-blue-500"
                     />
-                    <span className="text-gray-700 text-sm md:text-base">I'm very interested in this style!</span>
+                    <span className="text-gray-700 text-sm md:text-base">I&apos;m very interested in this style!</span>
                   </label>
                   <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input
@@ -176,7 +176,7 @@ export default function Home() {
                       checked={formData.artisticInterest === 'need-more-info'}
                       className="h-4 w-4 text-blue-500"
                     />
-                    <span className="text-gray-700 text-sm md:text-base">I'd like to learn more</span>
+                    <span className="text-gray-700 text-sm md:text-base">I&apos;d like to learn more</span>
                   </label>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
                   Final Step!
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
-                  Ready to make this happen? Send me a DM on Instagram and let's discuss your vision for the shoot!
+                  Ready to make this happen? Send me a DM on Instagram and let&apos;s discuss your vision for the shoot!
                 </p>
                 <div className="text-center">
                   <Link
@@ -201,7 +201,7 @@ export default function Home() {
                 </div>
                 <div className="mt-6 text-gray-600">
                   <p className="text-xs md:text-sm">
-                    When you send a DM, I'll respond within 24 hours to:
+                    When you send a DM, I&apos;ll respond within 24 hours to:
                   </p>
                   <ul className="list-disc pl-6 mt-2 text-xs md:text-sm">
                     <li>Discuss available dates and times</li>
