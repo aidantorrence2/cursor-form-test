@@ -1,101 +1,241 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    bringFriend: '',
+    artisticInterest: '',
+  });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const totalSteps = 4;
+
+  const handleNext = () => {
+    if (step < totalSteps) {
+      setStep(step + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (step > 1) {
+      setStep(step - 1);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
+      <div className="max-w-md mx-auto px-4 py-8 md:max-w-2xl lg:max-w-4xl">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="relative w-full h-48 md:h-64 lg:h-80">
+            {step === 1 && (
+              <Image
+                src="/beach-welcome.png"
+                alt="Stunning beach sunset photoshoot"
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+            {step === 2 && (
+              <Image
+                src="/beach-friends.jpg"
+                alt="Friends enjoying a beach photoshoot"
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+            {step === 3 && (
+              <Image
+                src="/beach-artistic.png"
+                alt="Artistic beach portrait"
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+            {step === 4 && (
+              <Image
+                src="/beach-final.png"
+                alt="Professional beach photography"
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
+          </div>
+
+          <div className="p-4 md:p-8">
+            <div className="mb-8">
+              <div className="flex justify-between items-center mb-4">
+                {Array.from({ length: totalSteps }).map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-full h-1 ${
+                      index + 1 <= step ? 'bg-blue-500' : 'bg-gray-200'
+                    } ${index < totalSteps - 1 ? 'mr-1' : ''}`}
+                  />
+                ))}
+              </div>
+              <p className="text-sm text-gray-500 text-center">
+                Step {step} of {totalSteps}
+              </p>
+            </div>
+
+            {step === 1 && (
+              <div className="space-y-6">
+                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                  Free Beach Photo Shoot
+                </h1>
+                <div className="prose max-w-none">
+                  <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    I'm offering a free beach photo shoot opportunity while I'm in town for a short time. Here are the details.
+                  </p>
+                  <ul className="list-disc pl-6 mt-4 text-gray-600 text-sm md:text-base">
+                    <li>The shoot is totally free. There are no hidden fees or costs. I am making content for my portfolio and social media and I'm looking for models to shoot with.</li>
+                    <li>1 to 2 hours professional photography session</li>
+                    <li>Professional guidance and posing tips</li>
+                    <li>You will receive the photos in 2 weeks</li>
+                    <li>I am open to any ideas you have for the shoot!</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            {step === 2 && (
+              <div className="space-y-6">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                  Bring a Friend
+                </h2>
+                <p className="text-gray-600 mb-6 text-sm md:text-base">
+                  It's very important for me to ensure participants feel comfortable during the shoot. You are welcome to bring any guests that you would like. Or if you want to bring a friend to shoot with, that's also fine. Let me know if that is something you are interested in!
+                </p>
+                <div className="space-y-3">
+                  <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="bringFriend"
+                      value="yes"
+                      onChange={handleChange}
+                      checked={formData.bringFriend === 'yes'}
+                      className="h-4 w-4 text-blue-500"
+                    />
+                    <span className="text-gray-700 text-sm md:text-base">Yes, I'd love to bring a friend!</span>
+                  </label>
+                  <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="bringFriend"
+                      value="no"
+                      onChange={handleChange}
+                      checked={formData.bringFriend === 'no'}
+                      className="h-4 w-4 text-blue-500"
+                    />
+                    <span className="text-gray-700 text-sm md:text-base">No, it's fine</span>
+                  </label>
+                </div>
+              </div>
+            )}
+
+            {step === 3 && (
+              <div className="space-y-6">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                  Beach Photo Shoot
+                </h2>
+                <p className="text-gray-600 mb-6 text-sm md:text-base">
+                  The theme for the shoot is an artistic nature or beach photo shoot. You can bring bikinis, swimwear, and/or dresses to the shoot. Please let me know if you have any concerns or questions about the wardrobe or anything else!
+                </p>
+                <div className="space-y-3">
+                  <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="artisticInterest"
+                      value="very-interested"
+                      onChange={handleChange}
+                      checked={formData.artisticInterest === 'very-interested'}
+                      className="h-4 w-4 text-blue-500"
+                    />
+                    <span className="text-gray-700 text-sm md:text-base">I'm very interested in this style!</span>
+                  </label>
+                  <label className="flex items-center space-x-3 p-3 md:p-4 border rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="artisticInterest"
+                      value="need-more-info"
+                      onChange={handleChange}
+                      checked={formData.artisticInterest === 'need-more-info'}
+                      className="h-4 w-4 text-blue-500"
+                    />
+                    <span className="text-gray-700 text-sm md:text-base">I'd like to learn more</span>
+                  </label>
+                </div>
+              </div>
+            )}
+
+            {step === 4 && (
+              <div className="space-y-6">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                  Final Step!
+                </h2>
+                <p className="text-gray-600 mb-6 text-sm md:text-base">
+                  Ready to make this happen? Send me a DM on Instagram and let's discuss your vision for the shoot!
+                </p>
+                <div className="text-center">
+                  <Link
+                    href="https://www.instagram.com/direct/t/madebyaidan"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Message @madebyaidan on Instagram
+                  </Link>
+                </div>
+                <div className="mt-6 text-gray-600">
+                  <p className="text-xs md:text-sm">
+                    When you send a DM, I'll respond within 24 hours to:
+                  </p>
+                  <ul className="list-disc pl-6 mt-2 text-xs md:text-sm">
+                    <li>Discuss available dates and times</li>
+                    <li>Answer any questions you have</li>
+                    <li>Share more example photos</li>
+                    <li>Provide pricing details</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            <div className="mt-6 md:mt-8 flex justify-between">
+              {step > 1 && (
+                <button
+                  onClick={handleBack}
+                  className="px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Back
+                </button>
+              )}
+              {step < totalSteps && (
+                <button
+                  onClick={handleNext}
+                  className={`${
+                    step === 1 ? 'w-full' : ''
+                  } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+                >
+                  Continue
+                </button>
+              )}
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
