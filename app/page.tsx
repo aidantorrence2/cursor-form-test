@@ -76,7 +76,7 @@ export default function Home() {
           </div>
 
           <div className="p-4 md:p-8">
-            <div className="mb-8">
+            <div className="mb-4">
               <div className="flex justify-between items-center mb-4">
                 {Array.from({ length: totalSteps }).map((_, index) => (
                   <div
@@ -94,7 +94,7 @@ export default function Home() {
 
             {step === 1 && (
               <div className="space-y-6">
-                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Free Beach Photo Shoot
                 </h1>
                 <div className="prose max-w-none">
@@ -114,7 +114,7 @@ export default function Home() {
 
             {step === 2 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Bring a Friend
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -149,7 +149,7 @@ export default function Home() {
 
             {step === 3 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Beach Photo Shoot
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -184,7 +184,7 @@ export default function Home() {
 
             {step === 4 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Final Step!
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -229,7 +229,7 @@ export default function Home() {
                     step === 1 ? 'w-full' : ''
                   } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
                 >
-                  Continue
+                  Get Started
                 </button>
               )}
             </div>
