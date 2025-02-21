@@ -188,26 +188,25 @@ export default function Home() {
                   Final Step!
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
-                  Ready to make this happen? Send me a DM on Instagram and let&apos;s discuss your vision for the shoot!
+                  Ready to make this happen? Let&apos;s schedule a quick introductory call to discuss your vision for the shoot!
                 </p>
                 <div className="text-center">
                   <Link
-                    href="https://www.instagram.com/m/madebyaidan"
-                    target="_blank"
+                    href="https://cal.com/aidantorrence/photo-shoot-collab"
                     className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
-                    Message @madebyaidan on Instagram
+                    Schedule Intro Call
                   </Link>
                 </div>
                 <div className="mt-6 text-gray-600">
                   <p className="text-xs md:text-sm">
-                    When you send a DM, I&apos;ll respond within 24 hours to:
+                    During our call, we&apos;ll discuss:
                   </p>
                   <ul className="list-disc pl-6 mt-2 text-xs md:text-sm">
-                    <li>Discuss available dates and times</li>
-                    <li>Answer any questions you have</li>
-                    <li>Share more example photos</li>
-                    <li>Provide pricing details</li>
+                    <li>Available dates and times for the shoot</li>
+                    <li>Your vision and ideas</li>
+                    <li>Location preferences</li>
+                    <li>Any questions you have</li>
                   </ul>
                 </div>
               </div>
