@@ -102,7 +102,7 @@ export default function Home() {
                     I&apos;m offering a free beach photo shoot opportunity while I&apos;m in town for a short time. Here are the details.
                   </p>
                   <ul className="list-disc pl-6 mt-4 text-gray-600 text-sm md:text-base">
-                    <li>The shoot is totally free. There are no hidden fees or costs. I am making content for my portfolio and social media and I&apos;m looking for models to shoot with.</li>
+                    <li>The shoot is totally free. There are no hidden fees or costs.</li>
                     <li>1 to 2 hours professional photography session</li>
                     <li>Professional guidance and posing tips</li>
                     <li>You will receive the photos in 2 weeks</li>
