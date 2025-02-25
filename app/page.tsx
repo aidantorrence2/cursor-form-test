@@ -34,9 +34,9 @@ export default function Home() {
 
   return (
     <main className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
-      <div className="max-w-md mx-auto px-4 py-12 md:py-16 md:max-w-2xl lg:max-w-4xl">
+      <div className="max-w-md mx-auto px-4 py-6 md:py-12 md:max-w-2xl lg:max-w-4xl">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="relative w-full h-48 md:h-64 lg:h-80">
+          <div className="relative w-full h-40 md:h-64 lg:h-80">
             {step === 1 && (
               <Image
                 src="/beach-welcome.png"
@@ -93,15 +93,15 @@ export default function Home() {
             </div>
 
             {step === 1 && (
-              <div className="space-y-6">
-                <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 text-center mb-4 md:mb-4">
+              <div className="space-y-4 md:space-y-6">
+                <h1 className="text-xl md:text-3xl font-serif font-bold text-gray-900 text-center mb-2 md:mb-4">
                   Free Beach Photo Shoot
                 </h1>
                 <div className="prose max-w-none">
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                     I&apos;m offering a free beach photo shoot opportunity while I&apos;m in town for a short time. Here are the details.
                   </p>
-                  <ul className="list-disc pl-6 mt-4 text-gray-600 text-sm md:text-base">
+                  <ul className="list-disc pl-6 mt-2 md:mt-4 text-gray-600 text-sm md:text-base">
                     <li>The shoot is totally free. There are no hidden fees or costs.</li>
                     <li>1 to 2 hours professional photography session</li>
                     <li>Professional guidance and posing tips</li>
@@ -212,7 +212,7 @@ export default function Home() {
               </div>
             )}
 
-            <div className="mt-6 md:mt-8 flex justify-between">
+            <div className="mt-4 md:mt-8 flex justify-between">
               {step > 1 && (
                 <button
                   onClick={handleBack}

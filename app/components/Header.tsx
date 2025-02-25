@@ -30,11 +30,11 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex flex-col sm:flex-row sm:items-center">
               <span className="text-xl font-serif tracking-wider text-gray-900">
                 AIDAN TORRENCE
               </span>
-              <span className="ml-2 text-xs uppercase tracking-widest font-light text-gray-600">
+              <span className="sm:ml-2 text-xs uppercase tracking-widest font-light text-gray-600">
                 Photography
               </span>
             </Link>
