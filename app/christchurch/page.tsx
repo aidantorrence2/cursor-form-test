@@ -32,7 +32,7 @@ export default function BusinessCollab() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-400">
       <div className="max-w-md mx-auto px-4 py-8 md:max-w-2xl lg:max-w-4xl">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="relative w-full h-48 md:h-64 lg:h-80">
@@ -81,7 +81,7 @@ export default function BusinessCollab() {
                   <div
                     key={index}
                     className={`w-full h-1 ${
-                      index + 1 <= step ? 'bg-blue-500' : 'bg-gray-200'
+                      index + 1 <= step ? 'bg-blue-700' : 'bg-gray-200'
                     } ${index < totalSteps - 1 ? 'mr-1' : ''}`}
                   />
                 ))}
@@ -127,7 +127,7 @@ export default function BusinessCollab() {
                       value="hospitality"
                       onChange={handleChange}
                       checked={formData.businessType === 'hospitality'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Hospitality (Restaurant, Café, Bar)</span>
                   </label>
@@ -138,7 +138,7 @@ export default function BusinessCollab() {
                       value="fashion-retail"
                       onChange={handleChange}
                       checked={formData.businessType === 'fashion-retail'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Fashion and Retail</span>
                   </label>
@@ -149,7 +149,7 @@ export default function BusinessCollab() {
                       value="service"
                       onChange={handleChange}
                       checked={formData.businessType === 'service'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Service Business</span>
                   </label>
@@ -160,7 +160,7 @@ export default function BusinessCollab() {
                       value="online"
                       onChange={handleChange}
                       checked={formData.businessType === 'online'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Online Business / E-commerce</span>
                   </label>
@@ -184,7 +184,7 @@ export default function BusinessCollab() {
                       value="product-focused"
                       onChange={handleChange}
                       checked={formData.contentInterest === 'product-focused'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Product-focused content</span>
                   </label>
@@ -195,7 +195,7 @@ export default function BusinessCollab() {
                       value="lifestyle"
                       onChange={handleChange}
                       checked={formData.contentInterest === 'lifestyle'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Lifestyle and atmosphere</span>
                   </label>
@@ -206,7 +206,7 @@ export default function BusinessCollab() {
                       value="other"
                       onChange={handleChange}
                       checked={formData.contentInterest === 'other'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Other (we can discuss)</span>
                   </label>
@@ -225,7 +225,7 @@ export default function BusinessCollab() {
                 <div className="text-center">
                   <a
                     href="https://cal.com/aidantorrence/your-business-collab"
-                    className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                   >
                     Schedule Call
                   </a>
@@ -248,7 +248,7 @@ export default function BusinessCollab() {
               {step > 1 && (
                 <button
                   onClick={handleBack}
-                  className="px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                 >
                   Back
                 </button>
@@ -258,7 +258,7 @@ export default function BusinessCollab() {
                   onClick={handleNext}
                   className={`${
                     step === 1 ? 'w-full' : ''
-                  } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+                  } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400`}
                 >
                   Continue
                 </button>

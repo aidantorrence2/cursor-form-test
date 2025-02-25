@@ -82,7 +82,7 @@ export default function Home() {
                   <div
                     key={index}
                     className={`w-full h-1 ${
-                      index + 1 <= step ? 'bg-blue-500' : 'bg-gray-200'
+                      index + 1 <= step ? 'bg-blue-700' : 'bg-gray-200'
                     } ${index < totalSteps - 1 ? 'mr-1' : ''}`}
                   />
                 ))}
@@ -128,7 +128,7 @@ export default function Home() {
                       value="yes"
                       onChange={handleChange}
                       checked={formData.bringFriend === 'yes'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">Yes, I&apos;d love to bring a friend!</span>
                   </label>
@@ -139,7 +139,7 @@ export default function Home() {
                       value="no"
                       onChange={handleChange}
                       checked={formData.bringFriend === 'no'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">No, it&apos;s fine</span>
                   </label>
@@ -163,7 +163,7 @@ export default function Home() {
                       value="very-interested"
                       onChange={handleChange}
                       checked={formData.artisticInterest === 'very-interested'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">I&apos;m very interested in this style!</span>
                   </label>
@@ -174,7 +174,7 @@ export default function Home() {
                       value="need-more-info"
                       onChange={handleChange}
                       checked={formData.artisticInterest === 'need-more-info'}
-                      className="h-4 w-4 text-blue-500"
+                      className="h-4 w-4 text-blue-400"
                     />
                     <span className="text-gray-700 text-sm md:text-base">I&apos;d like to learn more</span>
                   </label>
@@ -193,7 +193,7 @@ export default function Home() {
                 <div className="text-center">
                   <Link
                     href="https://cal.com/aidantorrence/photo-shoot-collab"
-                    className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                   >
                     Schedule Intro Call
                   </Link>
@@ -216,7 +216,7 @@ export default function Home() {
               {step > 1 && (
                 <button
                   onClick={handleBack}
-                  className="px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                 >
                   Back
                 </button>
@@ -226,7 +226,7 @@ export default function Home() {
                   onClick={handleNext}
                   className={`${
                     step === 1 ? 'w-full' : ''
-                  } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+                  } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400`}
                 >
                   {step === 1 ? 'Get Started' : 'Continue'}
                 </button>
