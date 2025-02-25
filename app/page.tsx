@@ -33,8 +33,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
-      <div className="max-w-md mx-auto px-4 py-8 md:max-w-2xl lg:max-w-4xl">
+    <main className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
+      <div className="max-w-md mx-auto px-4 py-12 md:py-16 md:max-w-2xl lg:max-w-4xl">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="relative w-full h-48 md:h-64 lg:h-80">
             {step === 1 && (
@@ -94,7 +94,7 @@ export default function Home() {
 
             {step === 1 && (
               <div className="space-y-6">
-                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4 md:mb-4">
+                <h1 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Free Beach Photo Shoot
                 </h1>
                 <div className="prose max-w-none">
@@ -114,7 +114,7 @@ export default function Home() {
 
             {step === 2 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
+                <h2 className="text-xl md:text-2xl font-serif font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Bring a Friend
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -149,7 +149,7 @@ export default function Home() {
 
             {step === 3 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
+                <h2 className="text-xl md:text-2xl font-serif font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Beach Photo Shoot
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -184,7 +184,7 @@ export default function Home() {
 
             {step === 4 && (
               <div className="space-y-6">
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 text-center mb-4 md:mb-4">
+                <h2 className="text-xl md:text-2xl font-serif font-bold text-gray-900 text-center mb-4 md:mb-4">
                   Final Step!
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -228,7 +228,7 @@ export default function Home() {
                     step === 1 ? 'w-full' : ''
                   } px-3 py-2 md:px-4 md:py-2 border border-transparent rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
                 >
-                  Get Started
+                  {step === 1 ? 'Get Started' : 'Continue'}
                 </button>
               )}
             </div>
