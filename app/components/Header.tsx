@@ -44,12 +44,18 @@ export default function Header() {
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
               Home
             </Link>
+            <Link href="/nz-photo-shoot" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+              NZ Photo Shoot
+            </Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
               About
             </Link>
           </nav>
           
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <Link href="/nz-photo-shoot" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+              NZ Photo Shoot
+            </Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
               About
             </Link>

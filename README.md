@@ -1,6 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Photography Portfolio Website
 
-## Getting Started
+## New Zealand Photo Shoot Landing Page
+
+A new landing page has been created for the premium New Zealand South Island photo shoot experience targeted at models and beautiful people.
+
+### Image Assets Status
+
+✅ **All images have been implemented!**
+
+The following images have been set up for the New Zealand photo shoot landing page:
+
+1. `/nz-mountains.jpg` - **Hero background image** showing epic New Zealand South Island mountains with a breathtaking natural quality.
+
+2. `/nz-experience.jpg` - Image showing a model in an epic New Zealand landscape.
+
+3. `/nz-gallery-1.jpg` through `/nz-gallery-3.jpg` - Gallery images using three high-quality photographs (DSC01969, DSC02652, and DSC02848).
+
+4. `/nz-cta-bg.jpg` - Background image for the call-to-action section.
+
+**Note on image sources**: The gallery now features exactly 3 selected images with no duplicates. All images are directly used from the DSC series photos.
+
+### Shoot Options
+
+The landing page now offers:
+
+- **Full-day experience**: 8+ hours with multiple locations
+- **Half-day sessions**: 4 hours with 1-2 locations
+- **Mini sessions**: 2 hours at a single location
+
+Each option includes professional direction, digital photography, and edited images proportional to the shoot length.
+
+### Updated for 2025
+
+The page has been updated to reflect the 2025 season, with current scheduling availability.
+
+### Image Style Guide
+
+The selected images follow these guidelines for optimal conversion to call bookings:
+
+- **Dramatic lighting**: Dawn or dusk lighting with golden hour warmth or moody atmospheric conditions
+- **Elegant aesthetic**: Models posed in ways that suggest power, grace, and harmony with nature
+- **Epic scale**: Wide, sweeping landscapes that showcase the grandeur of New Zealand's scenery
+- **Rich colors**: Deep blues, emerald greens, and golden tones that evoke the natural beauty of the location
+- **Contrast**: Strong visual contrast between the model and the environment
+
+### Navigation Updates
+
+The new page has been added to both the header and footer navigation components. The path to access the page is:
+
+```
+/nz-photo-shoot
+```
+
+### Booking Link
+
+The booking link has been set to:
+
+```
+https://cal.com/aidantorrence/nz-photo-experience
+```
+
+Please update this link if a different booking system or calendar link is preferred.
+
+### Call-to-Action Focus
+
+The page has been optimized to encourage call bookings with:
+- Multiple prominent call-to-action buttons throughout the page
+- Clear value proposition for scheduling a consultation
+- A fixed floating call button on mobile view
+- Urgency-creating messaging about limited availability
+
+## Development
+
+This is a Next.js application using React and Tailwind CSS for styling.
+
+### Getting Started
 
 First, run the development server:
 
@@ -8,10 +82,6 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

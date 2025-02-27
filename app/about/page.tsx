@@ -75,10 +75,10 @@ export default function About() {
               
               <div className="mt-8">
                 <Link 
-                  href="/"
+                  href="https://cal.com/aidantorrence/photo-consultation"
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                 >
-                  Book a Free Shoot
+                  Schedule a Consultation
                 </Link>
               </div>
             </div>
@@ -130,17 +130,17 @@ export default function About() {
       <section className="py-16 md:py-24 bg-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-serif tracking-wide mb-6">
-            Ready for Your Beach Photoshoot?
+            Ready for Your Professional Photoshoot?
           </h2>
           <p className="text-xl text-blue-400 mb-8 max-w-2xl mx-auto">
-            Take advantage of this limited-time offer and book your free professional 
-            beach photoshoot today.
+            Let's discuss your vision and create a customized photography experience 
+            that captures your unique essence.
           </p>
           <Link 
-            href="https://cal.com/aidantorrence/photo-shoot-collab"
+            href="https://cal.com/aidantorrence/photo-consultation"
             className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
           >
-            Schedule Now
+            Schedule a Call
           </Link>
         </div>
       </section>

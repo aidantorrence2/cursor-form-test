@@ -41,6 +41,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link 
+                    href="/nz-photo-shoot" 
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    NZ Photo Shoot
+                  </Link>
+                </li>
+                <li>
+                  <Link 
                     href="/about" 
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
@@ -63,6 +71,16 @@ export default function Footer() {
                     rel="noopener noreferrer"
                   >
                     Schedule a Shoot
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://cal.com/aidantorrence/nz-photo-experience" 
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book NZ Experience
                   </a>
                 </li>
                 <li>
