@@ -133,7 +133,7 @@ export default function About() {
             Ready for Your Professional Photoshoot?
           </h2>
           <p className="text-xl text-blue-400 mb-8 max-w-2xl mx-auto">
-            Let's discuss your vision and create a customized photography experience 
+            Let&apos;s discuss your vision and create a customized photography experience 
             that captures your unique essence.
           </p>
           <Link 

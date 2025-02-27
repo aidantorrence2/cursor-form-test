@@ -5,7 +5,7 @@ type ErrorLevel = 'error' | 'warn' | 'info' | 'debug';
 
 interface ErrorOptions {
   component?: string;
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   showStack?: boolean;
 }
 
@@ -30,14 +30,14 @@ export const logger = {
   /**
    * Log info with consistent formatting
    */
-  info: (message: string, data?: any, options?: ErrorOptions) => {
+  info: (message: string, data?: unknown, options?: ErrorOptions) => {
     logMessage('info', message, data, options);
   },
   
   /**
    * Log debug information (only in development)
    */
-  debug: (message: string, data?: any, options?: ErrorOptions) => {
+  debug: (message: string, data?: unknown, options?: ErrorOptions) => {
     if (process.env.NODE_ENV === 'development') {
       logMessage('debug', message, data, options);
     }
@@ -100,4 +100,4 @@ export function setupGlobalErrorHandler() {
       });
     });
   }
-} 
+}
