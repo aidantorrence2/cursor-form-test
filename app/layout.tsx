@@ -20,11 +20,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aidan Torrence Photography | Free Beach Photo Shoot",
-  description: "Professional photography services specializing in natural light and beach photography. Book your free beach photo shoot session.",
+  title: "Aidan Torrence Photography",
+  description: "Professional photography services specializing in natural light and artistic portraits in beautiful locations.",
   openGraph: {
-    title: "Aidan Torrence Photography | Free Beach Photo Shoot",
-    description: "Book your free professional beach photo shoot session with Aidan Torrence Photography.",
+    title: "Aidan Torrence Photography",
+    description: "Capturing beautiful moments in breathtaking locations with professional photography services.",
     siteName: 'Aidan Torrence Photography',
     images: [
       {
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Free Beach Photo Shoot | Aidan Torrence Photography",
-    description: "Book your free professional beach photo shoot session with Aidan Torrence Photography.",
+    title: "Aidan Torrence Photography",
+    description: "Capturing beautiful moments in breathtaking locations with professional photography services.",
     images: ['/DSC02848.jpg'],
   },
   icons: {
