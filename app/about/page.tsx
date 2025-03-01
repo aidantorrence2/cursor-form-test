@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 export default function About() {
   return (
-    <main className="pt-16 min-h-screen">
+    <main className="pt-16 min-h-screen bg-black text-white">
       {/* Hero section */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gray-900/30 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
         <Image
           src="/DSC02848.jpg"
           alt="Aidan Torrence Photography"
@@ -29,7 +29,7 @@ export default function About() {
       </section>
       
       {/* Bio section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:flex md:items-center md:space-x-10 lg:space-x-16">
             <div className="md:w-2/5 mb-10 md:mb-0">
@@ -44,11 +44,11 @@ export default function About() {
             </div>
             
             <div className="md:w-3/5">
-              <h2 className="text-3xl md:text-4xl font-serif tracking-wide text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif tracking-wide text-white mb-6">
                 The Passion Behind the Lens
               </h2>
               
-              <div className="prose prose-lg text-gray-600">
+              <div className="prose prose-lg prose-invert text-gray-300">
                 <p>
                   Hello, I&apos;m Aidan Torrence, a professional photographer with a passion for 
                   capturing the beauty of natural environments and the genuine emotions of people.
@@ -78,60 +78,42 @@ export default function About() {
       </section>
       
       {/* Philosophy section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-black border-t border-zinc-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif tracking-wide text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif tracking-wide text-white mb-4">
               My Photography Philosophy
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Creating timeless images that capture genuine emotions and beautiful moments
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Natural Light</h3>
-              <p className="text-gray-600">
+            <div className="bg-zinc-900 p-6 md:p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-3">Natural Light</h3>
+              <p className="text-gray-300">
                 I specialize in using natural light to create warm, authentic images that 
                 highlight your best features and capture the magic of the moment.
               </p>
             </div>
             
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Authentic Connection</h3>
-              <p className="text-gray-600">
+            <div className="bg-zinc-900 p-6 md:p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-3">Authentic Connection</h3>
+              <p className="text-gray-300">
                 My goal is to create an environment where you feel comfortable being yourself, 
                 allowing me to capture genuine expressions and emotions.
               </p>
             </div>
             
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Beautiful Locations</h3>
-              <p className="text-gray-600">
+            <div className="bg-zinc-900 p-6 md:p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold text-white mb-3">Beautiful Locations</h3>
+              <p className="text-gray-300">
                 I carefully select stunning natural settings that complement your unique style 
                 and create a breathtaking backdrop for your photos.
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* CTA section without booking link */}
-      <section className="py-16 md:py-24 bg-blue-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif tracking-wide mb-6">
-            Professional Photography Services
-          </h2>
-          <p className="text-xl text-blue-400 mb-8 max-w-2xl mx-auto">
-            I offer a variety of photography services to capture your unique essence and create lasting memories.
-          </p>
-          <Link 
-            href="/photo-shoot"
-            className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
-          >
-            View Free Photo Experience
-          </Link>
         </div>
       </section>
     </main>
