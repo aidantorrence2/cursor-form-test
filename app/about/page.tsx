@@ -72,15 +72,6 @@ export default function About() {
                   best possible images to my clients.
                 </p>
               </div>
-              
-              <div className="mt-8">
-                <Link 
-                  href="https://cal.com/aidantorrence/photo-consultation"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
-                >
-                  Schedule a Consultation
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -126,21 +117,20 @@ export default function About() {
         </div>
       </section>
       
-      {/* CTA section */}
+      {/* CTA section without booking link */}
       <section className="py-16 md:py-24 bg-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-serif tracking-wide mb-6">
-            Ready for Your Professional Photoshoot?
+            Professional Photography Services
           </h2>
           <p className="text-xl text-blue-400 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your vision and create a customized photography experience 
-            that captures your unique essence.
+            I offer a variety of photography services to capture your unique essence and create lasting memories.
           </p>
           <Link 
-            href="https://cal.com/aidantorrence/photo-consultation"
+            href="/photo-shoot"
             className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-blue-400 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
           >
-            Schedule a Call
+            View Free Photo Experience
           </Link>
         </div>
       </section>

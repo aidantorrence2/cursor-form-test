@@ -6,19 +6,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-50 border-t border-gray-100">
+    <footer className="bg-black border-t border-zinc-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center">
-              <span className="text-lg font-serif tracking-wider text-gray-900">
+              <span className="text-lg font-serif tracking-wider text-white">
                 AIDAN TORRENCE
               </span>
-              <span className="ml-2 text-xs uppercase tracking-widest font-light text-gray-600">
+              <span className="ml-2 text-xs uppercase tracking-widest font-light text-gray-400">
                 Photography
               </span>
             </div>
-            <p className="mt-2 text-sm text-gray-500 max-w-md">
+            <p className="mt-2 text-sm text-gray-400 max-w-md">
               Capturing beautiful moments in breathtaking locations.
               Professional photography services specializing in natural light 
               and beach photography.
@@ -27,30 +27,22 @@ export default function Footer() {
           
           <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-16">
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">
+              <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
                 Navigation
               </h3>
               <ul className="mt-4 space-y-3">
                 <li>
                   <Link 
                     href="/" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link 
-                    href="/nz-photo-shoot" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    NZ Photo Shoot
-                  </Link>
-                </li>
-                <li>
-                  <Link 
                     href="/about" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     About
                   </Link>
@@ -59,34 +51,14 @@ export default function Footer() {
             </div>
             
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">
+              <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
                 Connect
               </h3>
               <ul className="mt-4 space-y-3">
                 <li>
                   <a 
-                    href="https://cal.com/aidantorrence/photo-shoot-collab" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Schedule a Shoot
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://cal.com/aidantorrence/nz-photo-experience" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Book NZ Experience
-                  </a>
-                </li>
-                <li>
-                  <a 
                     href="mailto:contact@example.com" 
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     Contact
                   </a>
@@ -96,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-100">
+        <div className="mt-8 pt-8 border-t border-zinc-800">
           <p className="text-xs text-gray-500 text-center">
             &copy; {currentYear} Aidan Torrence Photography. All rights reserved.
           </p>
