@@ -67,9 +67,6 @@ export default function FreePhotoShoot() {
                 />
               </div>
               
-              <h3 className="text-lg md:text-xl font-serif font-bold text-center mb-4">
-                Free Photo Session
-              </h3>
               <p className="text-gray-300 text-sm md:text-base mb-4">
                 I&apos;m offering a free photo shoot opportunity while I&apos;m in town for a limited time. Here are the details:
               </p>
