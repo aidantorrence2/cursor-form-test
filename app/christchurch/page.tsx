@@ -98,13 +98,13 @@ export default function BusinessCollab() {
                 </h1>
                 <div className="prose max-w-none">
                   <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                    I&apos;m offering free social media content creation for Christchurch businesses. Here are the details.
+                    I'm offering free social media content creation for Christchurch businesses. Here are the details.
                   </p>
                   <ul className="list-disc pl-6 mt-4 text-gray-600 text-sm md:text-base">
                     <li>Professional photography and content creation at no cost</li>
                     <li>High-quality images optimized for social media</li>
                     <li>2-3 hours of content creation at your location</li>
-                    <li>You&apos;ll receive the content within 1 week</li>
+                    <li>You'll receive the content within 1 week</li>
                     <li>Perfect for Instagram, Facebook, and other platforms</li>
                   </ul>
                 </div>
@@ -220,7 +220,7 @@ export default function BusinessCollab() {
                   Final Step!
                 </h2>
                 <p className="text-gray-600 mb-6 text-sm md:text-base">
-                  Let&apos;s schedule a quick call to discuss your business and content needs! Remember, this service is completely free - there are no hidden fees or costs whatsoever.
+                  Let's schedule a quick call to discuss your business and content needs! Remember, this service is completely free - there are no hidden fees or costs whatsoever.
                 </p>
                 <div className="text-center">
                   <a
@@ -232,7 +232,7 @@ export default function BusinessCollab() {
                 </div>
                 <div className="mt-6 text-gray-600">
                   <p className="text-xs md:text-sm">
-                    During our call, we&apos;ll discuss:
+                    During our call, we'll discuss:
                   </p>
                   <ul className="list-disc pl-6 mt-2 text-xs md:text-sm">
                     <li>Your business goals and target audience</li>

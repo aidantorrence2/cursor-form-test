@@ -39,7 +39,7 @@ export default function NZPhotoShoot() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            An exclusive photo experience amidst New Zealand&apos;s breathtaking South Island landscapes. Full-day and shorter sessions available.
+            An exclusive photo experience amidst New Zealand's breathtaking South Island landscapes. Full-day and shorter sessions available.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -116,10 +116,10 @@ export default function NZPhotoShoot() {
             <div className="order-2 md:order-1">
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">The Experience</h2>
               <p className="text-gray-300 mb-6">
-                Immerse yourself in the dramatic landscapes of New Zealand&apos;s South Island with an exclusive full-day photography experience. This bespoke photo adventure combines digital and film photography to capture your essence against the backdrop of one of the world&apos;s most breathtaking locations.
+                Immerse yourself in the dramatic landscapes of New Zealand's South Island with an exclusive full-day photography experience. This bespoke photo adventure combines digital and film photography to capture your essence against the backdrop of one of the world's most breathtaking locations.
               </p>
               <p className="text-gray-300 mb-6">
-                This isn&apos;t just a photo shoot—it&apos;s an artistic collaboration between subject and environment, designed to showcase your natural beauty harmonized with New Zealand&apos;s rugged majesty.
+                This isn't just a photo shoot—it's an artistic collaboration between subject and environment, designed to showcase your natural beauty harmonized with New Zealand's rugged majesty.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -253,7 +253,7 @@ export default function NZPhotoShoot() {
                   </li>
                   <li className="flex items-start">
                     <span className="font-serif font-bold text-lg mr-3">3.</span>
-                    <p>Experience your full-day shoot across South Island&apos;s most stunning landscapes</p>
+                    <p>Experience your full-day shoot across South Island's most stunning landscapes</p>
                   </li>
                   <li className="flex items-start">
                     <span className="font-serif font-bold text-lg mr-3">4.</span>
@@ -292,12 +292,12 @@ export default function NZPhotoShoot() {
                 title: "Fashion Model"
               },
               {
-                quote: "The attention to detail and artistic vision throughout the experience was unmatched. These aren&apos;t just photos—they&apos;re art that tells my story.",
+                quote: "The attention to detail and artistic vision throughout the experience was unmatched. These aren't just photos—they're art that tells my story.",
                 name: "James R.",
                 title: "Commercial Model"
               },
               {
-                quote: "The combination of digital precision and film&apos;s artistic quality created a diverse portfolio in just one day. Worth every moment.",
+                quote: "The combination of digital precision and film's artistic quality created a diverse portfolio in just one day. Worth every moment.",
                 name: "Eliza T.",
                 title: "Influencer & Model"
               }
@@ -340,7 +340,7 @@ export default function NZPhotoShoot() {
             >
               Schedule Your Call Now
             </Link>
-            <p className="text-sm text-gray-400">No obligation. Let&apos;s discuss your vision and create something extraordinary.</p>
+            <p className="text-sm text-gray-400">No obligation. Let's discuss your vision and create something extraordinary.</p>
           </div>
         </div>
       </div>
@@ -357,11 +357,11 @@ export default function NZPhotoShoot() {
               },
               {
                 question: "Do I need modeling experience?",
-                answer: "While experience is beneficial, it&apos;s not required. Direction and guidance will be provided throughout the day to ensure natural, authentic poses that complement your features and the stunning landscapes."
+                answer: "While experience is beneficial, it's not required. Direction and guidance will be provided throughout the day to ensure natural, authentic poses that complement your features and the stunning landscapes."
               },
               {
                 question: "What should I bring to the shoot?",
-                answer: "After our consultation call, you&apos;ll receive a detailed preparation guide. Generally, we recommend bringing 3-5 outfit options, minimal accessories, and comfortable shoes for moving between locations."
+                answer: "After our consultation call, you'll receive a detailed preparation guide. Generally, we recommend bringing 3-5 outfit options, minimal accessories, and comfortable shoes for moving between locations."
               },
               {
                 question: "How quickly will I receive my images?",

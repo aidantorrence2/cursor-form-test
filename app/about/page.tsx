@@ -21,7 +21,7 @@ export default function About() {
               About Aidan Torrence
             </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto font-light">
-              Professional photographer capturing life&apos;s beautiful moments
+              Professional photographer capturing life's beautiful moments
             </p>
           </div>
         </div>
@@ -49,13 +49,13 @@ export default function About() {
               
               <div className="prose prose-lg prose-invert text-gray-300">
                 <p>
-                  Hello, I&apos;m Aidan Torrence, a professional photographer with a passion for 
+                  Hello, I'm Aidan Torrence, a professional photographer with a passion for 
                   capturing the beauty of natural environments and the genuine emotions of people.
                 </p>
                 
                 <p>
                   My journey in photography began with a simple appreciation for moments that tell 
-                  stories. Over the years, I&apos;ve developed a style that emphasizes natural light, 
+                  stories. Over the years, I've developed a style that emphasizes natural light, 
                   authentic expressions, and the breathtaking backdrop of beaches and coastal scenes.
                 </p>
                 
@@ -66,7 +66,7 @@ export default function About() {
                 </p>
                 
                 <p>
-                  When I&apos;m not behind the camera, you&apos;ll find me exploring new locations, studying 
+                  When I'm not behind the camera, you'll find me exploring new locations, studying 
                   different lighting techniques, and constantly refining my craft to deliver the 
                   best possible images to my clients.
                 </p>

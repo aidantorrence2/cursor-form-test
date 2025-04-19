@@ -20,8 +20,8 @@ export default function PhotoShoot() {
         >
           Schedule Intro Call
         </Link>
-      </div>
-
+          </div>
+          
       <div className="max-w-4xl mx-auto px-4 py-8">
         {!isSubmitted ? (
           <div>
@@ -30,18 +30,18 @@ export default function PhotoShoot() {
               {/* Two square images at the top instead of one large image */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
-                  <Image 
-                    src="/nz-experience.jpg" 
-                    alt="Photo session example" 
+                <Image 
+                  src="/nola.jpg" 
+                  alt="New Orleans photo session example" 
                     fill
                     className="object-cover"
                     priority
-                  />
-                </div>
+                />
+              </div>
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
                   <Image 
-                    src="/nz-gallery-1.jpg" 
-                    alt="Beach photo style example" 
+                    src="/avery.jpg" 
+                    alt="Portrait photo style example" 
                     fill
                     className="object-cover"
                     priority
@@ -51,39 +51,39 @@ export default function PhotoShoot() {
               
               <div className="space-y-4">
                 <p className="text-gray-300">
-                  I am offering a free photo session for a limited time while I am in town. You can bring swimwear, fashion outfits, or dresses that complement natural environments.
+                  I am offering a free photo session for a limited time while I am in town. you can bring fashion outfits like shirts, jeans, skirts, dresses, or swimwear that complement natural outdoor environments.
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <div className="mr-3 mt-1">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                     <p>Free 1-2 hour photo session at beautiful locations</p>
                   </li>
                   <li className="flex items-start">
                     <div className="mr-3 mt-1">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                     <p>Guidance and posing tips during the shoot</p>
                   </li>
                   <li className="flex items-start">
                     <div className="mr-3 mt-1">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                     <p>Receive your photos in 2 weeks</p>
                   </li>
                   <li className="flex items-start">
                     <div className="mr-3 mt-1">
-                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
                     <p>You're welcome to bring a friend if you'd feel more comfortable</p>
                   </li>
                 </ul>
@@ -109,23 +109,23 @@ export default function PhotoShoot() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
                   <Image 
-                    src="/nz-gallery-2.jpg" 
-                    alt="Nature photo style example" 
+                    src="/abby.jpg" 
+                    alt="Portrait photo style example" 
                     fill
                     className="object-cover"
                   />
-                </div>
+            </div>
                 <div className="relative aspect-square w-full rounded-lg overflow-hidden">
-                  <Image 
-                    src="/nz-experience.jpg" 
-                    alt="Beach photo style example" 
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+              <Image 
+                src="/beka.jpg" 
+                    alt="Outdoor portrait example" 
+                fill 
+                className="object-cover"
+              />
             </div>
           </div>
+        </div>
+      </div>
         ) : (
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -138,7 +138,7 @@ export default function PhotoShoot() {
               <p className="text-gray-300 mb-8">
                 Click the button below to schedule your free beach photo session.
               </p>
-            </div>
+          </div>
             
             <Link
               href="https://cal.com/aidantorrence/photo-shoot-collab"
