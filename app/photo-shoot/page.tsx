@@ -93,7 +93,7 @@ export default function PhotoShoot() {
               <div className="bg-zinc-900 rounded-lg p-5 border border-zinc-800">
                 <h2 className="text-xl font-serif font-bold mb-3">Next Steps</h2>
                 <p className="text-gray-300 mb-4">
-                  Ready to get started? The next step is to schedule a quick introductory call. During this call, we'll discuss location options, timing, and your vision for the shoot. This helps ensure we create the perfect photo session experience for you.
+                  Ready to get started? The next step is to schedule a quick introductory call. During this call, we'll discuss location options, timing, and your vision for the shoot.
                 </p>
                 <div className="text-center mt-4">
                   <Link
