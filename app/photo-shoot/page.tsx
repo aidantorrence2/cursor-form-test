@@ -51,7 +51,7 @@ export default function PhotoShoot() {
               
               <div className="space-y-4">
                 <p className="text-gray-300">
-                  I am offering a free photo session for a limited time while I am in town. You can bring fashion outfits like shirts, jeans, skirts, dresses, or swimwear that complement natural outdoor environments.
+                  I am offering a free photo session for a limited time while I am in town. You can bring fashion outfits like shirts, jeans, skirts, dresses, or swimwear that complement natural environments.
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">

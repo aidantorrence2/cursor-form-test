@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="mt-2 text-sm text-gray-400 max-w-md">
               Capturing beautiful moments in breathtaking locations.
               Professional photography services specializing in natural light 
-              and beach photography.
+              photography.
             </p>
           </div>
           
