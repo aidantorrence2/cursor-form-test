@@ -218,7 +218,7 @@ export default function PhotoShoot() {
               },
               {
                 question: "What should I bring to the shoot?",
-                answer: "After our consultation call, you'll receive preparation guidance. Generally, bringing a few outfit options that work with beach and nature settings is recommended."
+                answer: "After our consultation call, you'll receive preparation guidance. Please bring outfits that complement you, natural hair and makeup, and feel free to bring any accessories or props that you'd like to use."
               }
             ].map((faq, index) => (
               <div key={index} className="border-b border-zinc-800 pb-4">
