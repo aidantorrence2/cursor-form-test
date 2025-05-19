@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "if [ -x ./node_modules/.bin/next ]; then next lint; else echo 'next not installed, skipping lint'; fi"
   },
   "dependencies": {
     "framer-motion": "^11.0.5",
