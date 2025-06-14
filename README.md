@@ -104,3 +104,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Focus Reminder Cron (Render)
+A shell script and `render.yaml` are provided under `focus-reminder/` to run a focus reminder every two minutes using Render's Cron Job service. Create a new Cron Job on Render, point it at this repository, and add your `TODOIST_TOKEN`, `PUSHOVER_APP_TOKEN`, and `PUSHOVER_USER_KEY` secrets in the Environment tab.
