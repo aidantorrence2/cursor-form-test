@@ -1,0 +1,12 @@
+services:
+  - type: cron
+    name: pushcut-reminder
+    env: docker
+    repo: https://github.com/<yourusername>/pushcut-reminder
+    schedule: "*/2 * * * *"
+    startCommand: ./pushcut-reminder.sh
+    envVars:
+      - key: TODOIST_TOKEN
+        sync: false
+      - key: PUSHCUT_URL
+        sync: false
