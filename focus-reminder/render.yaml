@@ -1,0 +1,14 @@
+services:
+  - type: cron
+    name: focus-reminder
+    env: docker
+    repo: https://github.com/<yourusername>/focus-reminder
+    schedule: "*/2 * * * *"
+    startCommand: ./focus-reminder.sh
+    envVars:
+      - key: TODOIST_TOKEN
+        sync: false
+      - key: PUSHOVER_APP_TOKEN
+        sync: false
+      - key: PUSHOVER_USER_KEY
+        sync: false
