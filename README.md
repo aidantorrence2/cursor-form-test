@@ -106,7 +106,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Focus Reminder Cron (Render)
-The script at `focus-reminder/focus-reminder.sh` now fetches your highest priority Todoist task and sends it via Pushover. It requires `jq` to parse the Todoist API response. A `render.yaml` configuration is provided to run the script every two minutes using Render's Cron Job service. Create a new Cron Job on Render, point it at this repository, and add your `TODOIST_TOKEN`, `PUSHOVER_APP_TOKEN`, and `PUSHOVER_USER_KEY` secrets in the Environment tab.
+The script at `focus-reminder/focus-reminder.sh` now fetches your highest priority Todoist task and sends it via Pushover with the task shown as the notification title. It requires `jq` to parse the Todoist API response. A `render.yaml` configuration is provided to run the script every two minutes using Render's Cron Job service. Create a new Cron Job on Render, point it at this repository, and add your `TODOIST_TOKEN`, `PUSHOVER_APP_TOKEN`, and `PUSHOVER_USER_KEY` secrets in the Environment tab.
 
 ## Pushcut Reminder Cron (Render)
 The script at `pushcut-reminder/pushcut-reminder.sh` sends your highest priority Todoist task to Pushcut so your "Speak Top Task" Shortcut can read it aloud. Like the Pushover version, it requires `jq` and uses the same Todoist query. Configure a Render Cron Job with the provided `render.yaml` and add `TODOIST_TOKEN` and `PUSHCUT_URL` as environment variables.
