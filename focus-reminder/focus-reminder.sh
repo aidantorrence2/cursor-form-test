@@ -16,6 +16,6 @@ TASK=$(curl -s \
 curl -s \
   -F "token=$PUSHOVER_APP_TOKEN" \
   -F "user=$PUSHOVER_USER_KEY" \
-  -F "title=Focus!" \
-  -F "message=$TASK" \
+  -F "title=$TASK" \
+  -F "message= " \
   https://api.pushover.net/1/messages.json >/dev/null
