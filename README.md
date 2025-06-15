@@ -110,3 +110,6 @@ The script at `focus-reminder/focus-reminder.sh` now fetches your highest priori
 
 ## Pushcut Reminder Cron (Render)
 The script at `pushcut-reminder/pushcut-reminder.sh` sends your highest priority Todoist task to Pushcut so your "Speak Top Task" Shortcut can read it aloud. Like the Pushover version, it requires `jq` and uses the same Todoist query. Configure a Render Cron Job with the provided `render.yaml` and add `TODOIST_TOKEN` and `PUSHCUT_URL` as environment variables.
+
+## Twilio Reminder Cron (Render)
+The script at `twilio-reminder/twilio-reminder.sh` sends your highest priority Todoist task via SMS using Twilio. Use the `render.yaml` in that directory to schedule a Render Cron Job. Provide `TODOIST_TOKEN`, `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`, and `TWILIO_TO_NUMBER` in the Environment tab.
