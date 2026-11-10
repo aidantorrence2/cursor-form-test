@@ -8,14 +8,36 @@ if [ -z "${TODOIST_TOKEN:-}" ] || [ -z "${PUSHOVER_APP_TOKEN:-}" ] || [ -z "${PU
   exit 1
 fi
 
-TASK=$(curl -sf \
+# Todoist REST v2 was retired. API v1 uses a filter endpoint and a results envelope.
+# Preserve the existing filter and first-result behavior during this migration.
+TASK=$(curl -fsS --connect-timeout 10 --max-time 30 --get \
   -H "Authorization: Bearer $TODOIST_TOKEN" \
-  "https://api.todoist.com/rest/v2/tasks?filter=priority%204%20|%20priority%203&limit=1" | \
-  jq -r '.[0].content // "No top-priority tasks"')
+  --data-urlencode 'query=priority 4 | priority 3' \
+  --data-urlencode 'limit=1' \
+  "https://api.todoist.com/api/v1/tasks/filter" | \
+  jq -er '
+    if type != "object" then
+      error("Unexpected Todoist response: expected an object")
+    elif (.results | type) != "array" then
+      error("Unexpected Todoist response: results must be an array")
+    elif (.results | length) == 0 then
+      "No top-priority tasks"
+    elif (.results[0].content | type) != "string" then
+      error("Unexpected Todoist response: task content must be a string")
+    elif (.results[0].content | length) == 0 then
+      error("Unexpected Todoist response: task content is empty")
+    else
+      .results[0].content
+    end')
 
-curl -sf \
-  -F "token=$PUSHOVER_APP_TOKEN" \
-  -F "user=$PUSHOVER_USER_KEY" \
-  -F "title=$TASK" \
-  -F "message=$TASK" \
+if [ -z "$TASK" ]; then
+  echo "Todoist returned an empty response" >&2
+  exit 1
+fi
+
+curl -fsS --connect-timeout 10 --max-time 30 \
+  --form-string "token=$PUSHOVER_APP_TOKEN" \
+  --form-string "user=$PUSHOVER_USER_KEY" \
+  --form-string "title=$TASK" \
+  --form-string "message=$TASK" \
   https://api.pushover.net/1/messages.json >/dev/null

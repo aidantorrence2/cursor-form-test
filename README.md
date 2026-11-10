@@ -113,3 +113,21 @@ The script at `pushcut-reminder/pushcut-reminder.sh` sends your highest priority
 
 ## Twilio Reminder Cron (Render)
 The script at `twilio-reminder/twilio-reminder.sh` sends your highest priority Todoist task via SMS using Twilio. Use the `render.yaml` in that directory to schedule a Render Cron Job. Provide `TODOIST_TOKEN`, `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`, and `TWILIO_TO_NUMBER` in the Environment tab.
+
+### Focus reminder API compatibility and checks
+
+The Pushover focus reminder uses Todoist API v1's `/tasks/filter` endpoint,
+the `query` parameter, and the paginated `results` response. REST v2 is retired.
+See the [Todoist migration guide](https://developer.todoist.com/api/v1/#tag/Migrating-from-v9).
+The migration preserves the existing `priority 4 | priority 3` filter and selects
+the first matching task. An empty result list still sends "No top-priority tasks";
+HTTP failures or malformed responses fail the job without sending a notification.
+
+Run its offline regression tests with Python 3, Bash, and jq installed:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+The tests replace curl with a local stub, so no real API requests or notifications
+are sent. Render's deployed execution must still be verified separately.
