@@ -33,8 +33,11 @@ if any("api.todoist.com" in arg for arg in args):
     if code:
         print("curl: (22) The requested URL returned error: 410", file=sys.stderr)
         sys.exit(code)
-    print(os.environ["MOCK_RESPONSE"])
+    with open(args[args.index("--output") + 1], "w") as response:
+        response.write(os.environ["MOCK_RESPONSE"])
 else:
+    if os.environ.get("MOCK_NOTIFY_EXIT") != "0":
+        print("curl: (22) The requested URL returned error: 503", file=sys.stderr)
     sys.exit(int(os.environ.get("MOCK_NOTIFY_EXIT", "0")))
 '''
 
@@ -71,6 +74,18 @@ class ReminderTests(unittest.TestCase):
         for call_flag in ("--connect-timeout", "--max-time"):
             self.assertIn(call_flag, args)
         self.assertIn("-fsS", args)
+        self.assertEqual(args[args.index("--retry") + 1], "0")
+        self.assertNotIn("--retry-all-errors", args)
+
+    def test_only_todoist_has_bounded_retries(self):
+        result, calls = self.run_script(SCRIPTS[0], '{"results": []}')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        args = calls[0]
+        for flag, value in (("--retry", "2"), ("--retry-delay", "1"), ("--retry-max-time", "10"), ("--max-time", "30")):
+            self.assertEqual(args[args.index(flag) + 1], value)
+        self.assertNotIn("--retry-all-errors", args)
+        self.assertFalse(Path(args[args.index("--output") + 1]).exists())
+        self.assertTrue(all(call[0] == "-q" for call in calls))
 
     def test_api_v1_response_and_literal_task_content(self):
         for script in SCRIPTS:
@@ -96,6 +111,7 @@ class ReminderTests(unittest.TestCase):
                     result, calls = self.run_script(script, response)
                     self.assertNotEqual(result.returncode, 0)
                     self.assertEqual(len(calls), 1)
+                    self.assertIn("Todoist", result.stderr)
 
     def test_todoist_http_error_never_sends_notification(self):
         for script in SCRIPTS:
@@ -103,7 +119,10 @@ class ReminderTests(unittest.TestCase):
                 result, calls = self.run_script(script, '', todoist_exit=22)
                 self.assertNotEqual(result.returncode, 0)
                 self.assertEqual(len(calls), 1)
-                self.assertIn("410", result.stderr)
+                self.assertIn("Todoist: curl: (22)", result.stderr)
+                self.assertIn("Todoist request failed (curl exit 22)", result.stderr)
+                for secret in SECRETS.values():
+                    self.assertNotIn(secret, result.stderr)
 
     def test_notification_http_error_fails_cron(self):
         for script in SCRIPTS:
@@ -111,6 +130,8 @@ class ReminderTests(unittest.TestCase):
                 result, calls = self.run_script(script, '{"results": []}', notify_exit=22)
                 self.assertEqual(result.returncode, 22)
                 self.assertEqual(len(calls), 2)
+                self.assertIn("Pushover: curl: (22)", result.stderr)
+                self.assertIn("Pushover request failed (curl exit 22)", result.stderr)
 
     def test_missing_required_environment_never_calls_network(self):
         required = {

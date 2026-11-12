@@ -123,11 +123,19 @@ The migration preserves the existing `priority 4 | priority 3` filter and select
 the first matching task. An empty result list still sends "No top-priority tasks";
 HTTP failures or malformed responses fail the job without sending a notification.
 
-Run its offline regression tests with Python 3, Bash, and jq installed:
+Transient Todoist read failures are retried at most twice within a 10-second
+retry window, with a 30-second limit per attempt. Pushover sends are never
+retried, because an ambiguous failure could otherwise cause duplicate messages.
+Curl errors identify the failing service without logging credentials or task
+contents. No schedule or environment-variable changes are required.
+
+Run its offline regression tests with Python 3, Bash, curl, and jq installed:
 
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-The tests replace curl with a local stub, so no real API requests or notifications
-are sent. Render's deployed execution must still be verified separately.
+The tests replace curl with a local stub or route real curl to a loopback HTTP
+fixture, so no external API requests or notifications are sent. They cover retry
+exhaustion, recovery, partial-response cleanup, and single-attempt sends.
+Render's deployed execution must still be verified separately.
